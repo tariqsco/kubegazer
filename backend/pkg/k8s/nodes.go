@@ -1,4 +1,12 @@
-// Author: Tariq Scott
+/*
+ * File: backend/pkg/k8s/nodes.go
+ * Author: Tariq Scott
+ * Date: July 29, 2026
+ * Description: Implements node listing and metadata extraction for KubeGazer.
+ *              Normalizes corev1.Node capacities (CPU millicores, RAM bytes)
+ *              and status conditions into server-side NodeSummary DTOs for
+ *              consumption by the frontend.
+ */
 
 package k8s
 

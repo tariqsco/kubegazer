@@ -1,6 +1,11 @@
-// **
-// Author: Tariq Scott
-// ** Date: 2026-07-2026
+/*
+ * File: backend/pkg/k8s/client.go
+ * Author: Tariq Scott
+ * Date: July 26, 2026
+ * Description: Initializes and manages the Kubernetes client configuration
+ *              for KubeGazer. Handles out-of-cluster kubeconfig loading with
+ *              fallback to in-cluster service account configuration.
+ */
 
 package k8s
 
