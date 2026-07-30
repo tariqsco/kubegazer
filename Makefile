@@ -16,7 +16,7 @@ run: ## Run the backend application locally
 	go run ./cmd/kubegazer/main.go
 
 build: ## Compile the application binary into ./bin/kubegazer
-	go build -o bin/kubegazer ./cmd/main.go
+	go build -o bin/kubegazer ./cmd/kubegazer/main.go
 
 test: ## Run unit test across all packages
 	go test ./...
