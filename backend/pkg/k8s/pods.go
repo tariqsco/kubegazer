@@ -74,6 +74,7 @@ func toPodSummary(pod corev1.Pod) PodSummary {
 		Status:    status,
 		Node:      pod.Spec.NodeName,
 		Age:       time.Since(pod.CreationTimestamp.Time),
-		// Restarts, Images: your loop over pod.Status.ContainerStatuses - decision #2
+		Restarts:  restarts,
+		Images:    images,
 	}
 }

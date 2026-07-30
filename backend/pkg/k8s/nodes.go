@@ -23,7 +23,7 @@ type NodeSummary struct {
 	IsReady          bool
 	KubeletVersion   string
 	OSImage          string
-	CpuCapacityMilli int64 // e.g., 4000 = 4 cores
+	CPUCapacityMilli int64 // e.g., 4000 = 4 cores
 	MemCapacityBytes int64 // e.g., 8589934592 bytes
 }
 
@@ -50,7 +50,7 @@ func toNodeSummary(node corev1.Node) NodeSummary {
 		IsReady:          isNodeReady(node.Status.Conditions),
 		KubeletVersion:   node.Status.NodeInfo.KubeletVersion,
 		OSImage:          node.Status.NodeInfo.OSImage,
-		CpuCapacityMilli: cpu.MilliValue(),
+		CPUCapacityMilli: cpu.MilliValue(),
 		MemCapacityBytes: memory.Value(),
 	}
 }
