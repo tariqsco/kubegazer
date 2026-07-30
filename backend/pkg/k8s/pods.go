@@ -1,3 +1,12 @@
+/*
+ * File: backend/pkg/k8s/pods.go
+ * Author: Tariq Scott
+ * Date: July 27, 2026
+ * Description: Provides pod listing, filtering, and status extraction for
+ *              KubeGazer. Maps corev1.Pod resources to lightweight PodSummary
+ *              DTOs, handling termination grace periods and container wait states.
+ */
+
 package k8s
 
 import (
