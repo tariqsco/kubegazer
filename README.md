@@ -1,8 +1,8 @@
 # KubeGazer
 
-Kubegazer is a lightweight, high-performance Kubernetes cluster observability dashboard built with Go and `client-go`. 
+Kubegazer is a lightweight, high-performance Kubernetes cluster observability dashboard. 
 
-It provides real-time node resource tracking, pod status aggregation, and workload diagnostics without the overhead of heavy metrics infrastructure or third-party agent dependencies.
+Its purpose will be to provide real-time node resource tracking, pod status aggregation, and workload diagnostics without the overhead of heavy metrics infrastructure or third-party agent dependencies.
 
 ---
 
