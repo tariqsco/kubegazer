@@ -35,13 +35,6 @@ func (s *Server) routes() {
 	s.mux.HandleFunc("GET /api/v1/nodes", s.handleListNodes)
 }
 
-// Handler stub for listing nodes
-func (s *Server) handleListNodes(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(`{"message": "nodes endpoint stub"}`))
-}
-
 func (s *Server) Run(ctx context.Context, addr string) error {
 	httpServer := &http.Server{Addr: addr, Handler: s.mux}
 
