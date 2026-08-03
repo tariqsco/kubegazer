@@ -6,15 +6,6 @@ Its purpose will be to provide real-time node resource tracking, pod status aggr
 
 ---
 
-## Features (v0.1 MVP - In Active Development)
-
-- **Node Resource Normalization:** Server-side aggregation of CPU millicores (`MilliValue`) and RAM capacity (`Value` in bytes) to offload parsing overhead from the client UI.
-- **Accurate Workload Status Evaluation:** Handles complex pod states, prioritizing `DeletionTimestamp` (Terminating), container `Waiting` states (`CrashLoopBackOff`, `ImagePullBackOff`), and top-level `Phase` fallbacks.
-- **Pure `corev1` Dependency:** Operates directly against standard Kubernetes API servers—no mandatory reliance on `metrics-server` or `metrics.k8s.io` for core cluster state inspection.
-- **Idiomatic Go API Server:** Built using standard library `http.ServeMux` routing, contextual lifecycle management (`r.Context()` request cancellation), and `kubernetes.Interface` abstractions for testability.
-
----
-
 ## Architecture
 
 ```text
